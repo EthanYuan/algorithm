@@ -12,17 +12,29 @@ public class Program {
 
         InsertionSort.sortInASC(numbers_1);
         printIntArray(numbers_1);
+        System.out.println();
 
         // merge
         int[] numbers_5_1 = new int[]{1,4,5,9,11,28,30,33,2,4,20,33,34,55,66};
         printIntArray(numbers_5_1);
         MergeSort.mergeInASC(numbers_5_1, 0, 7, numbers_5_1.length - 1);
         printIntArray(numbers_5_1);
+        System.out.println();
 
         int[] numbers_5_2 = new int[]{2,3,8,11,1,4,5,9,11,28,30,33,2,4,20,33,34,55,66};
         printIntArray(numbers_5_2);
         MergeSort.mergeInASC(numbers_5_2, 4, 11, numbers_5_2.length - 1);
         printIntArray(numbers_5_2);
+        System.out.println();
+        System.out.println();
+
+        // merge-sort
+        System.out.print("MERGE-SORT");
+        int[] numbers_6 = new int[]{2,3,8,66,33,34,11,1,4,5,9,11,28,30,33,2,4,20,55};
+        printIntArray(numbers_6);
+        MergeSort.mergeSortInASC(numbers_6, 0, numbers_6.length - 1);
+        printIntArray(numbers_6);
+        System.out.println();
     }
 
     public static void generateArray(int[] number)

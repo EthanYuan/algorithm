@@ -4,6 +4,15 @@ package algorithm;
  * Created by Ethan on 2017/5/26.
  */
 public class MergeSort {
+    public static void mergeSortInASC(int [] numbers, int p, int r) throws Exception {
+        if(p < r){
+            int q = (int)Math.floor((p + r) / 2);
+            mergeSortInASC(numbers, p, q);
+            mergeSortInASC(numbers, q + 1, r);
+            mergeInASC(numbers, p, q, r);
+        }
+    }
+
     public static void mergeInASC(int[] numbers, int p, int q, int r) throws Exception {
         if(numbers.length < 2 || p > q || q >= r)
             throw new Exception("Para error.");
